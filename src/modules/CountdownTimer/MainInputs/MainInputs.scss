@@ -1,0 +1,10 @@
+@import '../../../styles/base.scss';
+
+#startStopButton {
+  @include button-base(0, $baseColorDark1, none, $baseColorLight1);
+}
+
+input {
+  padding: 1vh;
+  margin: 10px 1vw;
+}

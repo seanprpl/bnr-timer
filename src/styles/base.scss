@@ -1,0 +1,7 @@
+@import 'variables';
+
+p, input[submit], button, label {
+  color: $baseColorLight2;
+  background-color: black;
+  font-size: 1.3rem;
+}

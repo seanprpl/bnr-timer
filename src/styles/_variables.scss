@@ -1,0 +1,27 @@
+$baseColorLight1: #f8fff7;
+$baseColorLight2: #ffe66d;
+$baseColorDark1: #343434;
+$baseColorDark2: #2f3061;
+$baseColorMedium: #6ca6c1;
+
+@mixin button-base(
+  $leftMargin,
+  $backgroundColor,
+  $border,
+  $fontColor,
+) {
+  text-transform: uppercase;
+  padding: 12px 20px;
+  margin-left: $leftMargin;
+  background-color: $backgroundColor;
+  color: $fontColor;
+  border: $border;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $baseColorDark1;
+  }
+
+  @content;
+}
+

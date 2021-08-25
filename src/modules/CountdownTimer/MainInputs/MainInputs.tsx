@@ -1,3 +1,5 @@
+import './MainInputs.scss';
+
 interface PropsShape {
   timeInput: string;
   setTimeInput: Function;
@@ -25,6 +27,7 @@ export default function MainInputs(props: PropsShape) {
               e.preventDefault();
               setStarted(!started);
             }}
+            id='startStopButton'
           >
             {setStartStopLabel(started)}
           </button>

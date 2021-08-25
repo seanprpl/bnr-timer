@@ -1,0 +1,17 @@
+
+#container {
+  padding-top: 40px;
+}
+
+$timerFontSize: 8rem;
+
+#timerText {
+  font-size: $timerFontSize;
+  font-weight: 700;
+  line-height: 6rem;
+  margin: 20px auto;
+
+  @media screen and (max-width: 325px) {
+    font-size: 5rem;
+  }
+}

@@ -1,9 +1,17 @@
+
+@import "styles/variables";
+
+body {
+  background-color: black;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
 
-.black {
-  color: black;
+.regular-text {
+  color: $baseColorLight2;
 }
 
 .red {

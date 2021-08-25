@@ -1,0 +1,8 @@
+@import '../../../styles/variables.scss';
+
+.control-button {
+  @include button-base(2vw, black, 1px solid white, white);
+
+  margin-top: 5px;
+  margin-botton: 5px;
+}

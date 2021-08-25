@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getSeconds } from "../getSeconds";
+import { getSeconds } from "../functions/getSeconds";
 
 export default function useTimeInput(timeInput: string) {
   const [rawSeconds, setRawSeconds] = useState(0);

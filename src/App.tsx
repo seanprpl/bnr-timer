@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import CountdownTimer from './modules/CountdownTimer/CountdownTimer';
 
 

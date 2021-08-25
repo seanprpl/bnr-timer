@@ -8,7 +8,7 @@ export default function useTimerTextClass(rawSeconds: number, started: boolean) 
 
   useEffect(() => {
     if (rawSeconds > -1 && started) {
-      if (rawSeconds > 20) { setTimerTextClass('black'); }
+      if (rawSeconds > 20) { setTimerTextClass('regular-text'); }
       else { 
         setTimerTextClass('red'); 
 

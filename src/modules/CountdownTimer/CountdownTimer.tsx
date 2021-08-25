@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import ReactInterval from 'react-interval';
-import MainInputs from './MainInputs';
-import SpeedControls from './SpeedControls';
+import MainInputs from './MainInputs/MainInputs';
+import SpeedControls from './SpeedControls/SpeedControls';
 import { splitMinutesAndSeconds } from './functions/splitMinutesAndSeconds';
 import useTimeInput from './customHooks/useTimeInput';
 import { parseTimeOrErr } from './functions/parseTimeOrErr';
 import { setStartStopLabel } from './functions/setStartStopLabel';
 import useTimerTextClass from './customHooks/useTimerTextClass';
+import './CountdownTimer.scss';
 
 export default function CountdownTimer() {
   const [timeInput, setTimeInput] = useState('');
@@ -16,7 +17,7 @@ export default function CountdownTimer() {
   const timerTextClass = useTimerTextClass(rawSeconds, started);
 
   return (
-    <div>
+    <div id="container">
       <MainInputs 
         timeInput={timeInput}
         setTimeInput={setTimeInput}
@@ -31,7 +32,7 @@ export default function CountdownTimer() {
         enabled={started}
         callback={() => { rawSeconds > 0 && setRawSeconds(rawSeconds - 1) }}
       />
-      <h1 className={timerTextClass}>
+      <h1 id='timerText' className={`regular-text ${timerTextClass}`}>
         {parseTimeOrErr(rawSeconds, splitMinutesAndSeconds)}
       </h1>
 
